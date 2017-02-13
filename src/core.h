@@ -6,13 +6,15 @@
 #include <deadbeef/gtkui_api.h>
 
 
-#define VK_AUTH_APP_ID "3035566"
-#define VK_AUTH_REDIR_URL "http://scorpp.github.io/db-vk/vk-id.html"
-#define VK_AUTH_URL "http://oauth.vkontakte.ru/authorize" \
+#define VK_AUTH_APP_ID "2274003"
+#define VK_AUTH_APP_SECRET "hHbZxrka2uZ6jB1inYsH"
+#define VK_AUTH_URL "http://oauth.vk.com/token" \
         "?client_id=" VK_AUTH_APP_ID \
+        "&client_secret=" VK_AUTH_APP_SECRET \
         "&scope=audio,friends,groups,offline" \
-        "&redirect_uri=" VK_AUTH_REDIR_URL \
-        "&response_type=token"
+        "&grant_type=password" \
+        "&username=USERNAME" \ 
+        "&password=PASSWORD"
 
 // deadbeef config keys
 #define CONF_VK_AUTH_URL "vk.auth.url"
