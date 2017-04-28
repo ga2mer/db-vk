@@ -35,7 +35,7 @@ http_get_string (const gchar *url, GError **error) {
     trace ("Requesting URL %s\n", url);
 
     curl_easy_setopt (curl, CURLOPT_URL, url);
-    curl_easy_setopt (curl, CURLOPT_USERAGENT, "DeadBeef");
+    curl_easy_setopt (curl, CURLOPT_USERAGENT, "VKAndroidApp/4.9-1118");
     curl_easy_setopt (curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
     // enable up to 10 redirects
     curl_easy_setopt (curl, CURLOPT_FOLLOWLOCATION, 1);
