@@ -347,7 +347,9 @@ vk_detect_search_target(const gchar *search_text, SearchQuery *query) {
     query->query = NULL;
 
     // try to find of know vk.com prefixes in search string
-    for (gint i = 0; remains == NULL && VK_PUBLIC_SITE_PREFIXES[i] != NULL; i++) {
+    //opensuse? fix
+    gint i;
+    for (i = 0; remains == NULL && VK_PUBLIC_SITE_PREFIXES[i] != NULL; i++) {
         remains = strip_prefix (search_text, VK_PUBLIC_SITE_PREFIXES[i]);
     }
     if (remains == NULL) {

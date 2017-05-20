@@ -125,8 +125,9 @@ vk_audio_response_parse (const gchar *json,
     assert(json_is_object (root));
     tmp_node = json_object_get (root, "response");
     assert(json_is_array (tmp_node));
-
-    for (size_t i = 0; i < json_array_size (tmp_node); i++) {
+    //opensuse? fix
+    size_t i;
+    for (i = 0; i < json_array_size (tmp_node); i++) {
         VkAudioTrack audio_track;
         if (vk_audio_track_parse (tmp_node, i, &audio_track)) {
             callback (&audio_track, i, userdata);
